@@ -1,0 +1,59 @@
+//to install pacakage.json
+npm init
+npm install -D parcel
+npm install react
+npm install react-dom
+npx parcel index.html
+npx parcel indec.html --https
+
+//pacakage.json : Manages your project's dependencies and metadata.
+-it is a configuration for npm
+-each dependency has it's own package.json
+
+
+//bundler bundles/pacakages your app so we can push it to production
+ex parcel
+//HMR - hor module replacement
+//it creates cashe files in our project folder so every time we save or execute it can speed up the process.
+//it also does image optimization, minification,compressing
+
+
+//there are two type of dependecies
+1. dev dependency : (parcel, Babel, jest, webpack, ESlint)
+-Used only during development, such as testing libraries, build tools, or linters. Not included in the production build.
+
+2. normal dependency  : (React,Express, Axios, Lodash)
+-Required for the application to run in production, like React, Express, or other core libraries. These are included in the 
+production build
+
+
+^ (Caret): 
+-Allows updates to the package that do not change the leftmost non-zero digit in the version. 
+-ex: ^2.12.0 allows updates to any version >=2.12.0 and <3.0.0.
+
+~ (Tilde): 
+-Allows updates to the package that only change the rightmost digit in the version. 
+-ex: ~2.12.0 allows updates to any version >=2.12.0 and <2.13.0.
+
+
+// package-lock.json: 
+-records the exact versions of all dependencies (including nested dependencies) that were installed when 
+ you first ran npm install or added a package. 
+-This ensures that every time someone else installs your project, they get the exact same versions of the dependencies that
+ were originally installed, providing consistency and avoiding potential issues caused by different versions of packages.
+-because of this we can later download the exact node modules using 'npm install'.
+
+
+//node_modules
+-it fetches the code of all the dependecies in our code.
+-it is kind of like database where all our packages exist.
+
+
+//.gitignore
+-If you don't want to push some files into production add them .gitignore file, it won't push them there
+-whatever you can regenerate don't put it on github
+
+//Browserslist
+"browserslist": [
+    "last 2 versions"
+  ]
