@@ -42,4 +42,3 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 //rendering react element
 root.render(reactEle);
 //rendering react functional component
-//root.render(<Heading/>)

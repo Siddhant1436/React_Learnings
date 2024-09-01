@@ -57,3 +57,7 @@ production build
 "browserslist": [
     "last 2 versions"
   ]
+
+
+//we can write react without jsx, but jsx make it easy to write react code, because core react is very hard to code and 
+read
